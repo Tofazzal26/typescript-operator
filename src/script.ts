@@ -70,18 +70,45 @@
 
 // console.log(myFunc(2, { name: "Tofazzal", age: 34 }));
 
-let myFunc: (a: number, b: number, c: { name: string; age: number }) => number;
+// let myFunc: (a: number, b: number, c: { name: string; age: number }) => number;
 
-myFunc = (
-  age: number,
-  height: number,
-  userInfo: { name: string; age: number }
-) => {
-  if (userInfo.age === 20) {
-    return age + height;
-  } else {
-    return age - height;
+// myFunc = (
+//   age: number,
+//   height: number,
+//   userInfo: { name: string; age: number }
+// ) => {
+//   if (userInfo.age === 20) {
+//     return age + height;
+//   } else {
+//     return age - height;
+//   }
+// };
+
+// console.log(myFunc(20, 6, { name: "abir", age: 20 }));
+
+class Player {
+  name: string;
+  age: number;
+  country: string;
+
+  constructor(a: string, b: number, c: string) {
+    this.name = a;
+    this.age = b;
+    this.country = c;
   }
-};
+  play() {
+    console.log(
+      `My name is ${this.name}, and my age is ${this.age}, my country is ${this.country}`
+    );
+  }
+}
 
-console.log(myFunc(20, 6, { name: "abir", age: 20 }));
+const test = new Player("Abir", 44, "Bangladesh");
+
+const another: Player[] = [];
+
+another.push(test);
+
+console.log(test.country);
+
+// console.log(another());
