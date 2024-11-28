@@ -61,11 +61,27 @@
 
 // console.log(myFunc(2, 4, "tofazzal"));
 
-type stringOrNumber = string | number;
-type userNameOrAge = { name: string; age: number };
+// type stringOrNumber = string | number;
+// type userNameOrAge = { name: string; age: number };
 
-const myFunc = (id: stringOrNumber, user: userNameOrAge) => {
-  return `My name is ${user.name} and my age is ${user.age} my id: ${id}`;
+// const myFunc = (id: stringOrNumber, user: userNameOrAge): string => {
+//   return `My name is ${user.name} and my age is ${user.age} my id: ${id}`;
+// };
+
+// console.log(myFunc(2, { name: "Tofazzal", age: 34 }));
+
+let myFunc: (a: number, b: number, c: { name: string; age: number }) => number;
+
+myFunc = (
+  age: number,
+  height: number,
+  userInfo: { name: string; age: number }
+) => {
+  if (userInfo.age === 20) {
+    return age + height;
+  } else {
+    return age - height;
+  }
 };
 
-console.log(myFunc(2, { name: "Tofazzal", age: 34 }));
+console.log(myFunc(20, 6, { name: "abir", age: 20 }));
