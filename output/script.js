@@ -56,18 +56,37 @@
 //   }
 // };
 // console.log(myFunc(20, 6, { name: "abir", age: 20 }));
-class Player {
-    constructor(a, b, c) {
-        this.name = a;
-        this.age = b;
-        this.country = c;
+// class Player {
+//   name: string;
+//   age: number;
+//   country: string;
+//   constructor(a: string, b: number, c: string) {
+//     this.name = a;
+//     this.age = b;
+//     this.country = c;
+//   }
+//   play() {
+//     console.log(
+//       `My name is ${this.name}, and my age is ${this.age}, my country is ${this.country}`
+//     );
+//   }
+// }
+// const test = new Player("Abir", 44, "Bangladesh");
+// const another: Player[] = [];
+// another.push(test);
+// console.log(test.country);
+// console.log(another());
+class Science {
+    constructor(name, age, country) {
+        this.name = name;
+        this.age = age;
+        this.country = country;
     }
     play() {
         console.log(`My name is ${this.name}, and my age is ${this.age}, my country is ${this.country}`);
     }
 }
-const test = new Player("Abir", 44, "Bangladesh");
-const another = [];
-another.push(test);
-console.log(test.country);
-// console.log(another());
+const testing = new Science("abir", 20, "bangladesh");
+const test = [];
+test.push(testing);
+console.log(testing.country);
