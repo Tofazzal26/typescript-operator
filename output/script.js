@@ -113,17 +113,24 @@
 //   data: { name: "abir", age: 20 },
 // };
 // console.log(response);
-var RType;
-(function (RType) {
-    RType[RType["SUCCESS"] = 0] = "SUCCESS";
-    RType[RType["AUTHENTICATED"] = 1] = "AUTHENTICATED";
-    RType[RType["FAILURE"] = 2] = "FAILURE";
-    RType[RType["FORBIDDEN"] = 3] = "FORBIDDEN";
-})(RType || (RType = {}));
-const responseData = {
-    status: 200,
-    type: RType.SUCCESS,
-    data: { name: "Abir", age: "20" },
-};
-console.log(responseData);
+// enum RType {
+//   SUCCESS,
+//   AUTHENTICATED,
+//   FAILURE,
+//   FORBIDDEN,
+// }
+// interface myData<T> {
+//   status: number;
+//   type: RType;
+//   data: T;
+// }
+// const responseData: myData<object> = {
+//   status: 200,
+//   type: RType.SUCCESS,
+//   data: { name: "Abir", age: "20" },
+// };
+// console.log(responseData);
+let b = ["abir", 20, { t: "world" }];
+// b.push(true)
+b.push("abir");
 export {};

@@ -161,22 +161,28 @@ import { Science } from "./classes/Science.js";
 
 // console.log(response);
 
-enum RType {
-  SUCCESS,
-  AUTHENTICATED,
-  FAILURE,
-  FORBIDDEN,
-}
-interface myData<T> {
-  status: number;
-  type: RType;
-  data: T;
-}
+// enum RType {
+//   SUCCESS,
+//   AUTHENTICATED,
+//   FAILURE,
+//   FORBIDDEN,
+// }
+// interface myData<T> {
+//   status: number;
+//   type: RType;
+//   data: T;
+// }
 
-const responseData: myData<object> = {
-  status: 200,
-  type: RType.SUCCESS,
-  data: { name: "Abir", age: "20" },
-};
+// const responseData: myData<object> = {
+//   status: 200,
+//   type: RType.SUCCESS,
+//   data: { name: "Abir", age: "20" },
+// };
 
-console.log(responseData);
+// console.log(responseData);
+
+let b: [string, number, object] = ["abir", 20, { t: "world" }];
+
+// b.push(true)
+
+b.push("abir");
