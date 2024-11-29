@@ -1,3 +1,5 @@
+import { Science } from "./classes/Science.js";
+
 // let a = "tofazzal";
 
 // a = "abir";
@@ -113,20 +115,20 @@
 
 // console.log(another());
 
-class Science {
-  constructor(
-    public name: string,
-    private age: number,
-    readonly country: string
-  ) {}
-  play() {
-    console.log(
-      `My name is ${this.name}, and my age is ${this.age}, my country is ${this.country}`
-    );
-  }
-}
+// class Science {
+//   constructor(
+//     public name: string,
+//     private age: number,
+//     readonly country: string
+//   ) {}
+//   play() {
+//     console.log(
+//       `My name is ${this.name}, and my age is ${this.age}, my country is ${this.country}`
+//     );
+//   }
+// }
 
 const testing = new Science("abir", 20, "bangladesh");
 const test: Science[] = [];
 test.push(testing);
-console.log(testing.country);
+console.log(testing);
