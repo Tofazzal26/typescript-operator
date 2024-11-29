@@ -128,8 +128,35 @@ import { Science } from "./classes/Science.js";
 //   }
 // }
 
-const testing = new Science("abir", 20, "bangladesh");
-const test: Science[] = [];
-test.push(testing);
-console.log(testing);
+// const testing = new Science("abir", 20, "bangladesh");
+// const test: Science[] = [];
+// test.push(testing);
+// console.log(testing);
 // console.log(testing.age);
+
+// const addUser = <T>(obj: T) => {
+//   const id = Math.floor(Math.random() * 100);
+//   return { ...obj, id };
+// };
+
+// const user = {
+//   name: "abir",
+//   age: 20,
+//   country: "bd",
+// };
+
+// console.log(addUser(user));
+
+interface apiResponse<T> {
+  status: number;
+  type: string;
+  data: T;
+}
+
+const response: apiResponse<string> = {
+  status: 200,
+  type: "good",
+  data: "test",
+};
+
+console.log(response);
