@@ -147,16 +147,36 @@ import { Science } from "./classes/Science.js";
 
 // console.log(addUser(user));
 
-interface apiResponse<T> {
+// interface apiResponse<T> {
+//   status: number;
+//   type: string;
+//   data: T;
+// }
+
+// const response: apiResponse<object> = {
+//   status: 200,
+//   type: "good",
+//   data: { name: "abir", age: 20 },
+// };
+
+// console.log(response);
+
+enum RType {
+  SUCCESS,
+  AUTHENTICATED,
+  FAILURE,
+  FORBIDDEN,
+}
+interface myData<T> {
   status: number;
-  type: string;
+  type: RType;
   data: T;
 }
 
-const response: apiResponse<string> = {
+const responseData: myData<object> = {
   status: 200,
-  type: "good",
-  data: "test",
+  type: RType.SUCCESS,
+  data: { name: "Abir", age: "20" },
 };
 
-console.log(response);
+console.log(responseData);
