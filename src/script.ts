@@ -132,3 +132,4 @@ const testing = new Science("abir", 20, "bangladesh");
 const test: Science[] = [];
 test.push(testing);
 console.log(testing);
+// console.log(testing.age);
